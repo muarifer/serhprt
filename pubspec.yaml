@@ -1,8 +1,10 @@
 name: serhprt
-description: A new flutter plugin project.
+description: Flutter Plugin for HPRT Mobile Printers
 version: 0.0.1
-author:
-homepage:
+author: Murat Çeliker <murat@serenay.net.tr>
+homepage: https://www.serenay.net.tr/
+repository: https://github.com/muarifer/serhprt
+issue_tracker: https://github.com/muarifer/serhprt/issues
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
