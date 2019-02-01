@@ -1,6 +1,6 @@
 name: serhprt
-description: Flutter Plugin for HPRT Mobile Printers
-version: 0.0.1
+description: Flutter Plugin for HPRT Mobile Printers. Tested with HM-E300.
+version: 0.1.1
 author: Murat Çeliker <murat@serenay.net.tr>
 homepage: https://www.serenay.net.tr/
 repository: https://github.com/muarifer/serhprt

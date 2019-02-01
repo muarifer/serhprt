@@ -5,8 +5,7 @@ import 'package:flutter/services.dart';
 class Serhprt {
   static const ERROR = "-1";
 
-  static const MethodChannel _channel =
-      const MethodChannel('serhprt');
+  static const MethodChannel _channel = const MethodChannel('serhprt');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
@@ -22,7 +21,8 @@ class Serhprt {
     return await _channel.invokeMethod('connect', params);
   }
 
-  static Future<String> printBarcode(int tur, String barcode, int width, int height, int position, int justification) async {
+  static Future<String> printBarcode(int tur, String barcode, int width,
+      int height, int position, int justification) async {
     final Map<String, dynamic> params = <String, dynamic>{
       'tur': tur,
       'barcode': barcode,
@@ -34,7 +34,8 @@ class Serhprt {
     return await _channel.invokeMethod('printBarcode', params);
   }
 
-  static Future<String> printText(int alignment, bool isBold, bool isUnderline, bool isAntiWhite, int textSize, String data) async {
+  static Future<String> printText(int alignment, bool isBold, bool isUnderline,
+      bool isAntiWhite, int textSize, String data) async {
     final Map<String, dynamic> params = <String, dynamic>{
       'alignment': alignment,
       'isBold': isBold,
@@ -48,9 +49,7 @@ class Serhprt {
   }
 
   static Future<String> printAndFeed(int distance) async {
-    final Map<String, dynamic> params = <String, dynamic>{
-      'distance': distance
-    };
+    final Map<String, dynamic> params = <String, dynamic>{'distance': distance};
     return await _channel.invokeMethod('printAndFeed', params);
   }
 
@@ -58,5 +57,4 @@ class Serhprt {
     final bool result = await _channel.invokeMethod('isOpened');
     return result;
   }
-
 }
